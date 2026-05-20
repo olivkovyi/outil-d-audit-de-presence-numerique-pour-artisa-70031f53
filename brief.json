@@ -1,0 +1,293 @@
+{
+  "run_id": "run-1779242617699",
+  "job_index": 3,
+  "params": {
+    "owner_user_id": "user-1774822953462",
+    "owner_username": "admin",
+    "owner_display_name": "Administrator",
+    "count": 3,
+    "archetype": "tool",
+    "market": "France",
+    "language": "fr",
+    "country": "FR",
+    "brief": "Un diagnostic complet pour aider les artisans d'art à améliorer leur stratégie digitale.",
+    "notes": "Évaluez votre visibilité en ligne, l'optimisation de votre site web et votre présence sur les réseaux sociaux pour mieux attirer une clientèle intéressée par l'artisanat d'art français.\nSpécialisé pour les artisans du patrimoine, avec des recommandations concrètes pour le SEO et le marketing digital. Thème : L'aspect",
+    "import_notes": "",
+    "growth_job_id": "",
+    "growth_slug": "",
+    "growth_kind": "",
+    "external_site_request_id": "",
+    "external_client_ref": "",
+    "external_source_label": "",
+    "dashboard_mode": "builder",
+    "network_site_format": "forum",
+    "network_primary_topic": "",
+    "network_primary_geo": "",
+    "network_domain_pool": "forum-de-jeu.shop",
+    "network_hosting_pool": "4vps:netoper | server_id=447345 | ip=5.253.59.18 | ssh_user=root | ssh_port=22",
+    "network_dns_strategy": "auto_pool_assign",
+    "network_domain_flow": "manual",
+    "network_content_strategy": "",
+    "network_model_concept": "google/gemini-2.5-flash-lite:nitro",
+    "network_model_seo": "google/gemini-2.5-flash-lite:nitro",
+    "network_model_build": "google/gemini-2.5-flash",
+    "network_model_qa": "anthropic/claude-haiku-4.5",
+    "network_model_growth": "google/gemini-2.5-flash-lite:nitro",
+    "network_blueprint_id": "",
+    "mode": "production",
+    "run_kind": "generated_batch",
+    "publish_target": "render",
+    "requested_publish_target": "render",
+    "allow_url_fallback": false,
+    "railway_project_id_override": "",
+    "railway_environment_id_override": "",
+    "railway_service_id_override": "",
+    "railway_service_name_override": "",
+    "github_repo_private": true,
+    "stage_models": {
+      "ideation": "google/gemini-2.5-flash-lite:nitro",
+      "spec": "google/gemini-2.5-flash",
+      "copy": "google/gemini-2.5-flash-lite:nitro",
+      "qa": "anthropic/claude-haiku-4.5",
+      "escalation": "anthropic/claude-sonnet-4.6"
+    },
+    "archetype_display": "mixed batch",
+    "archetype_mix": [
+      "calculator",
+      "generator",
+      "tool"
+    ],
+    "forced_design_theme": "analog-meets-ai",
+    "forced_structure_preset": "metric-grid",
+    "site_idea_title": "Outil d'Audit de Présence Numérique pour Artisans du Patrimoine",
+    "site_idea_summary": "Évaluez votre visibilité en ligne, l'optimisation de votre site web et votre présence sur les réseaux sociaux pour mieux attirer une clientèle intéressée par l'artisanat d'art français."
+  },
+  "site_spec": {
+    "slug": "outil-d-audit-de-presence-numerique-pour-artisa-70031f53",
+    "theme": {
+      "name": "Analog Meets AI",
+      "slug": "analog-meets-ai",
+      "eyebrow": "Crafted Signal",
+      "family": "analog-meets-ai",
+      "moods": [
+        "human",
+        "tactile",
+        "inventive",
+        "warm"
+      ],
+      "archetypes": [
+        "generator",
+        "tool",
+        "calculator"
+      ],
+      "niches": [
+        "writing tools",
+        "brand tools",
+        "creative utility",
+        "research tools",
+        "document tools"
+      ],
+      "keywords": [
+        "collage",
+        "craft",
+        "hybrid",
+        "human",
+        "signal"
+      ],
+      "token_index": [
+        "analog",
+        "brand",
+        "calculator",
+        "collage",
+        "craft",
+        "crafted",
+        "creative",
+        "document",
+        "generator",
+        "human",
+        "hybrid",
+        "inventive",
+        "meets",
+        "research",
+        "signal",
+        "tactile",
+        "tool",
+        "tools",
+        "utility",
+        "warm",
+        "writing"
+      ],
+      "font_embed": "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap",
+      "display_font": "\"Fraunces\", serif",
+      "body_font": "\"IBM Plex Sans\", sans-serif",
+      "layout": "editorial",
+      "card_style": "paper",
+      "button_style": "outline",
+      "decor_style": "paper",
+      "hero_template": "1fr",
+      "seo_template": "1fr",
+      "feature_columns": 2,
+      "faq_columns": 2,
+      "hero_min_height": "70vh",
+      "panel_radius": "28px",
+      "card_radius": "26px",
+      "chip_radius": "999px",
+      "button_radius": "18px",
+      "outline_width": "1px",
+      "backdrop_blur": "16px",
+      "palette": {
+        "bg": "linear-gradient(155deg, #f7efe2 0%, #e7d7c2 44%, #dbeafe 100%)",
+        "surface": "rgba(255,250,244,0.9)",
+        "surface_border": "rgba(39,22,15,0.12)",
+        "text": "#27160f",
+        "muted": "#6f5a4a",
+        "accent": "#2563eb",
+        "accent_alt": "#ea580c",
+        "hero_glow": "rgba(37, 99, 235, 0.14)",
+        "button_text": "#f8fafc",
+        "panel_alt": "rgba(255,255,255,0.62)",
+        "shadow": "0 24px 64px rgba(71, 52, 37, 0.12)",
+        "input_fill": "rgba(255,255,255,0.52)"
+      }
+    },
+    "structure": {
+      "name": "Metric Grid",
+      "slug": "metric-grid",
+      "hero_variant": "command",
+      "proof_variant": "metrics",
+      "section_order": [
+        "features",
+        "seo",
+        "proof",
+        "faq"
+      ],
+      "feature_columns": 4,
+      "faq_columns": 2,
+      "family": "data-grid",
+      "moods": [
+        "technical",
+        "precise",
+        "systemic"
+      ],
+      "archetypes": [
+        "tool",
+        "calculator"
+      ],
+      "niches": [
+        "developer tools",
+        "qa",
+        "finance",
+        "analytics"
+      ],
+      "keywords": [
+        "metrics",
+        "grid",
+        "dashboard",
+        "precision"
+      ],
+      "token_index": [
+        "analytics",
+        "calculator",
+        "command",
+        "dashboard",
+        "data",
+        "developer",
+        "faq",
+        "features",
+        "finance",
+        "grid",
+        "metric",
+        "metrics",
+        "precise",
+        "precision",
+        "proof",
+        "seo",
+        "systemic",
+        "technical",
+        "tool",
+        "tools"
+      ]
+    },
+    "render_direction": "signal-bento",
+    "render_direction_name": "Signal Bento",
+    "page_blueprint": "signal-matrix",
+    "page_blueprint_name": "Signal Matrix",
+    "title": "Outil d'Audit de Présence Numérique pour Artisans du Patrimoine",
+    "tagline": "Votre Visibilité Numérique : Le Diagnostic",
+    "description": "Évaluez votre visibilité en ligne, l",
+    "feature_prefix": "Bloc",
+    "action": "Lancer le diagnostic",
+    "cta_primary": "Lancer le Diagnostic",
+    "cta_secondary": "Consulter la FAQ",
+    "inputs": [
+      {
+        "id": "website_url",
+        "label": "URL à auditer",
+        "type": "text",
+        "placeholder": "https://exemple.fr/offre-eco",
+        "weight": 1.0
+      },
+      {
+        "id": "page_title",
+        "label": "Balise title actuelle",
+        "type": "text",
+        "placeholder": "Comparateur assurance auto jeune conducteur",
+        "weight": 1.0
+      },
+      {
+        "id": "focus_keyword",
+        "label": "Mot-clé principal",
+        "type": "text",
+        "placeholder": "assurance auto jeune conducteur",
+        "weight": 1.0
+      }
+    ],
+    "hero_metrics": [
+      {
+        "value": "Signal Bento",
+        "label": "Cadence"
+      },
+      {
+        "value": "3",
+        "label": "Entrées"
+      },
+      {
+        "value": "Diagnostic",
+        "label": "Sortie"
+      }
+    ],
+    "trust_labels": [
+      "Signal Bento",
+      "Lancer le Diagnostic",
+      "Diagnostic",
+      "Utilitaire immédiat",
+      "Structure SEO claire"
+    ],
+    "result_label": "Diagnostic",
+    "result_unit": "",
+    "runtime_mode": "seo_diagnostic",
+    "page_variant": "console",
+    "faq_topic": "Outil d'Audit de Présence Numérique pour Artisans du Patrimoine",
+    "faq_entries": [
+      {
+        "question": "Pourquoi utiliser cet outil pour Outil d'Audit de Présence Numérique pour Artisans du Patrimoine ?",
+        "answer": "Il aide à cadrer le besoin rapidement et à orienter vers une prochaine action claire sur le marché France."
+      },
+      {
+        "question": "Le résultat est-il immédiat ?",
+        "answer": "Oui. L'interface est pensée pour une réponse rapide, lisible et exploitable dès la première interaction."
+      },
+      {
+        "question": "Cette page est-elle adaptée au SEO ?",
+        "answer": "Oui. La structure mélange utilité, clarté éditoriale et signaux de confiance sans surcharger l'expérience."
+      }
+    ],
+    "seo_paragraphs": [
+      "Cette page capte une intention forte autour de Outil d'Audit de Présence Numérique pour Artisans du Patrimoine et la transforme en action utile pour un public situé sur France.",
+      "Le format hero-first accélère la compréhension, réduit les frictions et améliore la lisibilité sur mobile comme sur desktop.",
+      "Le socle reste volontairement simple pour faciliter les tests, la QA continue et les variations SEO."
+    ],
+    "document_html": "<!DOCTYPE html>\n<html lang=\"fr\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Outil d&#x27;Audit de Présence Numérique pour Artisans du Patrimoine | Votre Visibilité Numérique : Le Diagnostic</title>\n    <meta name=\"description\" content=\"Évaluez votre visibilité en ligne, l\">\n    <style>\n        :root {\n            --color-bg: #f8f0e5;\n            --color-text: #332d29;\n            --color-primary: #b18e72;\n            --color-secondary: #e0d0c3;\n            --color-accent: #8b5e3e;\n            --font-family-header: 'Helvetica Neue', Arial, sans-serif;\n            --font-family-body: 'Georgia', serif;\n            --glass-bg: rgba(255, 255, 255, 0.7);\n            --glass-border: rgba(255, 255, 255, 0.9);\n            --glass-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);\n            --glow-color: rgba(177, 142, 114, 0.3);\n        }\n\n        body {\n            font-family: var(--font-family-body);\n            line-height: 1.6;\n            color: var(--color-text);\n            background-color: var(--color-bg);\n            margin: 0;\n            padding: 0;\n            display: flex;\n            flex-direction: column;\n            align-items: center;\n            overflow-x: hidden;\n        }\n\n        header {\n            width: 100%;\n            background-color: var(--color-primary);\n            color: var(--color-bg);\n            padding: 20px 0;\n            text-align: center;\n            box-shadow: var(--glass-shadow);\n        }\n\n        h1, h2, h3 {\n            font-family: var(--font-family-header);\n            margin-top: 0;\n            color: var(--color-accent);\n        }\n\n        h1 {\n            font-size: 2.5em;\n            letter-spacing: -1px;\n            color: var(--color-bg);\n        }\n\n        h2 {\n            font-size: 1.8em;\n            margin-bottom: 15px;\n            text-transform: uppercase;\n        }\n\n        h3 {\n            font-size: 1.3em;\n            margin-bottom: 10px;\n        }\n\n        .container {\n            width: 90%;\n            max-width: 1200px;\n            margin: 30px auto;\n            display: grid;\n            gap: 25px;\n            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));\n        }\n\n        .card {\n            background: var(--glass-bg);\n            border: 1px solid var(--glass-border);\n            border-radius: 10px;\n            padding: 25px;\n            box-shadow: var(--glass-shadow);\n            backdrop-filter: blur(5px);\n            position: relative;\n            overflow: hidden;\n            transition: all 0.3s ease;\n            display: flex;\n            flex-direction: column;\n        }\n\n        .card::before {\n            content: '';\n            position: absolute;\n            top: -10px;\n            left: -10px;\n            right: -10px;\n            bottom: -10px;\n            border-radius: 15px;\n            background: radial-gradient(circle at top left, var(--glow-color) 0%, transparent 50%);\n            opacity: 0;\n            transition: opacity 0.3s ease;\n            z-index: 0;\n        }\n\n        .card:hover::before {\n            opacity: 1;\n        }\n\n        .card > * {\n            position: relative;\n            z-index: 1;\n        }\n\n        form {\n            display: flex;\n            flex-direction: column;\n            gap: 15px;\n        }\n\n        label {\n            font-weight: bold;\n            display: block;\n            margin-bottom: 5px;\n            color: var(--color-accent);\n        }\n\n        input[type=\"url\"],\n        input[type=\"text\"],\n        select,\n        textarea {\n            width: calc(100% - 20px);\n            padding: 10px;\n            border: 1px solid var(--color-secondary);\n            border-radius: 5px;\n            font-family: var(--font-family-body);\n            font-size: 1em;\n            background-color: var(--color-bg);\n            color: var(--color-text);\n        }\n\n        textarea {\n            resize: vertical;\n            min-height: 80px;\n        }\n\n        button {\n            background-color: var(--color-accent);\n            color: white;\n            padding: 12px 20px;\n            border: none;\n            border-radius: 5px;\n            cursor: pointer;\n            font-size: 1.1em;\n            font-weight: bold;\n            transition: background-color 0.3s ease;\n        }\n\n        button:hover {\n            background-color: var(--color-primary);\n        }\n\n        #tool-result {\n            margin-top: 20px;\n            padding: 20px;\n            border: 1px dashed var(--color-primary);\n            background-color: var(--color-secondary);\n            border-radius: 8px;\n            font-size: 0.95em;\n            display: none;\n        }\n\n        .result-section {\n            margin-bottom: 15px;\n        }\n\n        .result-section h3 {\n            color: var(--color-accent);\n            margin-bottom: 8px;\n        }\n\n        .score-display {\n            font-size: 2em;\n            font-weight: bold;\n            color: var(--color-accent);\n            text-align: center;\n            margin-bottom: 15px;\n        }\n\n        .recommendation-list {\n            list-style-type: disc;\n            margin-left: 20px;\n        }\n\n        .seo-section {\n            width: 90%;\n            max-width: 1200px;\n            margin: 40px auto;\n            padding: 30px;\n            background: var(--glass-bg);\n            border: 1px solid var(--glass-border);\n            border-radius: 10px;\n            box-shadow: var(--glass-shadow);\n            backdrop-filter: blur(5px);\n        }\n\n        .seo-section h2 {\n            text-align: center;\n            margin-bottom: 25px;\n        }\n\n        .seo-section p {\n            margin-bottom: 15px;\n            text-align: justify;\n        }\n\n        .card.full-width {\n            grid-column: 1 / -1;\n        }\n\n        .headline-group h3 {\n            margin-top: 20px;\n            margin-bottom: 5px;\n            border-bottom: 1px solid var(--color-secondary);\n            padding-bottom: 5px;\n        }\n        .headline-group ul {\n            list-style: none;\n            padding: 0;\n        }\n        .headline-group li {\n            background-color: rgba(255, 255, 255, 0.4);\n            margin-bottom: 5px;\n            padding: 8px;\n            border-radius: 4px;\n            font-size: 0.9em;\n        }\n\n        @media (max-width: 768px) {\n            h1 {\n                font-size: 2em;\n            }\n            .container {\n                grid-template-columns: 1fr;\n            }\n            .card.full-width {\n                grid-column: auto;\n            }\n        }\n    </style>\n    <meta name=\"robots\" content=\"index, follow\">\n    <link rel=\"canonical\" href=\"https://outil-d-audit-de-presence-numerique-pour-artisa-70031f53.onrender.com\">\n    <meta property=\"og:title\" content=\"Outil d&#x27;Audit de Présence Numérique pour Artisans du Patrimoine\">\n    <meta property=\"og:description\" content=\"Évaluez votre visibilité en ligne, l\">\n    <meta property=\"og:url\" content=\"https://outil-d-audit-de-presence-numerique-pour-artisa-70031f53.onrender.com\">\n    <meta property=\"og:type\" content=\"website\">\n    <script type=\"application/ld+json\">{\"@context\": \"https://schema.org\", \"@type\": \"WebApplication\", \"name\": \"Outil d'Audit de Présence Numérique pour Artisans du Patrimoine\", \"description\": \"Évaluez votre visibilité en ligne, l\", \"url\": \"https://outil-d-audit-de-presence-numerique-pour-artisa-70031f53.onrender.com\", \"applicationCategory\": \"UtilityApplication\", \"operatingSystem\": \"Web Browser\"}</script>\n</head>\n<body data-site-slug=\"outil-d-audit-de-presence-numerique-pour-artisa-70031f53\" data-runtime-mode=\"seo_diagnostic\">\n    <header>\n        <h1>L'Aspect</h1>\n        <p>Outil d'Audit de Présence Numérique pour Artisans du Patrimoine</p>\n    </header>\n\n    <div class=\"container\">\n        <div class=\"card full-width\">\n            <h2>Votre Visibilité Numérique : Le Diagnostic</h2>\n            <p>Évaluez rapidement votre positionnement en ligne. Nous analysons les points clés de votre présence digitale pour vous aider à mieux valoriser votre savoir-faire artisanal.</p>\n            <form id=\"tool-form\">\n                <label for=\"website-url\">Votre site web (URL complète) :</label>\n                <input type=\"url\" id=\"website-url\" placeholder=\"https://votreatelier.fr\" required>\n\n                <label for=\"business-name\">Nom de votre atelier/entreprise :</label>\n                <input type=\"text\" id=\"business-name\" placeholder=\"Atelier Dupont - Ébéniste\" required>\n\n                <label for=\"specialty\">Votre spécialité artisanale :</label>\n                <input type=\"text\" id=\"specialty\" placeholder=\"Restauration de meubles anciens, Céramique d'art...\" required>\n\n                <label for=\"social-media\">Vos réseaux sociaux (séparés par des virgules) :</label>\n                <input type=\"text\" id=\"social-media\" placeholder=\"Facebook, Instagram, Pinterest\">\n\n                <label for=\"target-audience\">Votre clientèle cible :</label>\n                <select id=\"target-audience\">\n                    <option value=\"particuliers\">Particuliers (grand public)</option>\n                    <option value=\"professionnels\">Professionnels (architectes, décorateurs)</option>\n                    <option value=\"collectionneurs\">Collectionneurs / Amateurs d'art</option>\n                    <option value=\"mixte\">Mixte</option>\n                </select>\n\n                <button type=\"submit\" id=\"tool-submit\">Lancer le Diagnostic</button>\n            </form>\n        </div>\n\n        <div class=\"card full-width\" id=\"tool-result\" style=\"display: none;\">\n            <h2 id=\"result-headline\">Résultats du Diagnostic</h2>\n            <div class=\"score-display\" id=\"overall-score\">Score Général : --/100</div>\n\n            <div class=\"result-section\">\n                <h3>Visibilité en Ligne</h3>\n                <p id=\"visibility-summary\"></p>\n                <ul class=\"recommendation-list\" id=\"visibility-recs\"></ul>\n            </div>\n\n            <div class=\"result-section\">\n                <h3>Optimisation du Site Web (SEO)</h3>\n                <p id=\"seo-summary\"></p>\n                <ul class=\"recommendation-list\" id=\"seo-recs\"></ul>\n            </div>\n\n            <div class=\"result-section\">\n                <h3>Présence sur les Réseaux Sociaux</h3>\n                <p id=\"social-summary\"></p>\n                <ul class=\"recommendation-list\" id=\"social-recs\"></ul>\n            </div>\n\n            <div class=\"result-section\">\n                <h3>Marketing Digital & Contenu</h3>\n                <p id=\"marketing-summary\"></p>\n                <ul class=\"recommendation-list\" id=\"marketing-recs\"></ul>\n            </div>\n            <button data-affiliate-slot=\"premium-analysis\">Obtenir une Analyse Approfondie</button>\n        </div>\n\n        <div class=\"card\">\n            <h2>Pourquoi un diagnostic ?</h2>\n            <p>Dans l'univers numérique actuel, être un artisan d'art ne suffit plus. Il faut aussi être visible. Notre outil vous éclaire sur les forces et faiblesses de votre stratégie digitale pour que votre savoir-faire rencontre son public.</p>\n        </div>\n\n        <div class=\"card\">\n            <h2>Pour qui ?</h2>\n            <p>Spécialement conçu pour les artisans du patrimoine, les métiers d'art et créateurs français : ébénistes, céramistes, verriers, restaurateurs, joailliers, maroquiniers, etc. Votre art mérite d'être vu.</p>\n        </div>\n\n        <div class=\"card full-width\">\n            <h2>Titres d'accroche pour votre site :</h2>\n            <div class=\"headline-group\">\n                <h3>SEO</h3>\n                <ul>\n                    <li>Artisanat d'art français : Diagnostic SEO et Visibilité en Ligne</li>\n                    <li>Audit Digital Artisans du Patrimoine : Améliorez votre Présence</li>\n                    <li>Stratégie Digitale pour Métiers d'Art : Guide Complet</li>\n                </ul>\n            </div>\n            <div class=\"headline-group\">\n                <h3>Impact / Clickbait</h3>\n                <ul>\n                    <li>Votre Atelier est-il Invisible sur le Web ? Découvrez-le Maintenant !</li>\n                    <li>L'Erreur N°1 des Artisans d'Art sur Internet (Et Comment l'Éviter)</li>\n                    <li>Doublez votre Clientèle : Le Secret de la Visibilité Digitale Artisanale</li>\n                </ul>\n            </div>\n            <div class=\"headline-group\">\n                <h3>Expert</h3>\n                <ul>\n                    <li>Optimisation des Points de Contact Numériques pour l'Artisanat d'Art</li>\n                    <li>Analyse de Maturité Digitale pour les Acteurs du Patrimoine</li>\n                    <li>Cartographie Stratégique de la Présence en Ligne des Métiers Rares</li>\n                </ul>\n            </div>\n            <div class=\"headline-group\">\n                <h3>Douceur / Approche</h3>\n                <ul>\n                    <li>Révélez la Beauté de Votre Art en Ligne : Notre Guide Doux</li>\n                    <li>Donnez à Votre Artisanat la Lumière qu'il Mérite sur Internet</li>\n                    <li>Un Compagnon Digital pour Votre Savoir-Faire d'Exception</li>\n                </ul>\n            </div>\n            <div class=\"headline-group\">\n                <h3>Commercial</h3>\n                <ul>\n                    <li>Augmentez Vos Ventes : Le Diagnostic Digital pour Artisans</li>\n                    <li>Transformez Votre Présence en Ligne en Source de Revenus</li>\n                    <li>Débloquez Votre Potentiel Client avec Notre Audit Stratégique</li>\n                </ul>\n            </div>\n        </div>\n\n    </div>\n\n    <div class=\"seo-section\">\n        <h2>Développez la Portée de Votre Artisanat d'Art en Ligne</h2>\n        <p>En tant qu'artisan du patrimoine en France, la visibilité numérique est devenue cruciale pour attirer une clientèle passionnée et valoriser votre savoir-faire unique. Vous cherchez à savoir comment améliorer votre présence sur Internet, optimiser votre site web pour les moteurs de recherche (SEO), et utiliser efficacement les réseaux sociaux pour l'artisanat d'art ? Notre outil d'audit digital est spécialement conçu pour les métiers d'art français.</p>\n        <p>Que vous soyez ébéniste, céramiste, verrier, restaurateur d'œuvres d'art, ou tout autre créateur d'exception, comprendre les rouages du marketing digital est essentiel. Découvrez comment votre atelier peut capter l'attention de collectionneurs, de décorateurs ou de particuliers à la recherche de pièces uniques et authentiques. Nous vous offrons des recommandations concrètes pour le référencement naturel de votre site internet, la gestion de votre e-réputation, et l'élaboration d'une stratégie de contenu qui mettra en lumière la qualité et l'histoire de vos créations.</p>\n        <p>Ne laissez plus vos créations se perdre dans l'ombre. Grâce à un diagnostic précis de votre visibilité en ligne, obtenez des pistes d'amélioration pour atteindre un public plus large, accroître votre notoriété et développer vos ventes, tout en respectant l'authenticité et les valeurs de l'artisanat d'art français. Explorez les opportunités du digital pour votre patrimoine vivant.</p>\n    </div>\n\n    <script>\n        document.getElementById('tool-form').addEventListener('submit', function(event) {\n            event.preventDefault();\n\n            const websiteUrl = document.getElementById('website-url').value;\n            const businessName = document.getElementById('business-name').value;\n            const specialty = document.getElementById('specialty').value;\n            const socialMedia = document.getElementById('social-media').value;\n            const targetAudience = document.getElementById('target-audience').value;\n\n            // Simple simulation of analysis based on inputs\n            let score = 0;\n            let visibilityRecs = [];\n            let seoRecs = [];\n            let socialRecs = [];\n            let marketingRecs = [];\n\n            // Website URL check (basic)\n            if (websiteUrl.length > 10 && websiteUrl.includes('.')) {\n                score += 20;\n                visibilityRecs.push(\"Site web détecté. Assurez-vous qu'il est mobile-friendly et sécurisé (HTTPS).\");\n            } else {\n                visibilityRecs.push(\"Absence ou problème d'URL de site web. Un site est crucial pour votre visibilité.\");\n                score -= 10;\n            }\n\n            // Business Name (presence suggests established identity)\n            if (businessName.length > 5) {\n                score += 5;\n            }\n\n            // Specialty (keyword rich suggests better SEO potential)\n            if (specialty.split(',').length > 1 || specialty.length > 15) {\n                score += 10;\n                seoRecs.push(\"Votre spécialité est bien définie. Utilisez ces termes clés dans vos descriptions et titres de page.\");\n            } else {\n                seoRecs.push(\"Pensez à détailler davantage votre spécialité pour un meilleur référencement.\");\n            }\n\n            // Social Media presence (basic check)\n            const socialPlatforms = socialMedia.split(',').map(s => s.trim().toLowerCase()).filter(s => s.length > 0);\n            if (socialPlatforms.length >= 2) {\n                score += 15;\n                socialRecs.push(`Bonne présence sur ${socialPlatforms.length} plateformes. Pensez à adapter votre contenu à chacune.`);\n            } else if (socialPlatforms.length === 1) {\n                score += 5;\n                socialRecs.push(\"Vous êtes présent sur un réseau. Explorez d'autres plateformes pertinentes comme Pinterest ou Instagram.\");\n            } else {\n                socialRecs.push(\"Absence de réseaux sociaux majeurs. C'est un levier puissant pour l'artisanat d'art.\");\n                score -= 10;\n            }\n\n            // Target Audience (impacts marketing strategy)\n            if (targetAudience === 'collectionneurs' || targetAudience === 'professionnels') {\n                score += 10;\n                marketingRecs.push(\"Votre clientèle cible est spécifique. Développez du contenu qui répond à leurs attentes et préoccupations (ex: histoire des techniques, valeur patrimoniale).\");\n            } else {\n                marketingRecs.push(\"Adaptez votre communication pour toucher votre audience : langage, visuels, canaux de diffusion.\");\n            }\n\n            // General SEO / Content ideas (always relevant)\n            seoRecs.push(\"Mettez en place un blog pour partager votre savoir-faire et attirer du trafic qualifié.\");\n            seoRecs.push(\"Optimisez les descriptions de vos produits/services avec des mots-clés pertinents.\");\n            visibilityRecs.push(\"Enregistrez votre atelier sur Google My Business pour la visibilité locale.\");\n            socialRecs.push(\"Utilisez des visuels de haute qualité et des stories pour montrer l'envers du décor de votre travail.\");\n            marketingRecs.push(\"Pensez aux partenariats avec des influenceurs ou des blogs spécialisés dans l'artisanat.\");\n\n            // Summaries based on score and inputs\n            let visibilitySummary = \"Votre visibilité en ligne est le point de départ. Un site performant et une bonne indexation sont fondamentaux.\";\n            let seoSummary = \"L'optimisation pour les moteurs de recherche permet à votre atelier d'être trouvé par ceux qui cherchent votre art.\";\n            let socialSummary = \"Les réseaux sociaux sont votre vitrine vivante. Ils permettent de créer du lien avec votre audience.\";\n            let marketingSummary = \"Une stratégie de contenu pertinente convertira l'intérêt en opportunité commerciale.\";\n\n            if (score > 60) {\n                visibilitySummary = \"Votre base de visibilité semble solide. Il est temps d'affiner votre stratégie pour atteindre l'excellence.\";\n                seoSummary = \"Bonne orientation SEO. Pensez à l'analyse sémantique approfondie et au netlinking.\";\n                socialSummary = \"Votre présence sociale est active. Engagez-vous davantage avec votre communauté.\";\n                marketingSummary = \"Vous avez une bonne compréhension du marketing. Explorez les campagnes ciblées.\";\n            } else if (score < 40) {\n                visibilitySummary = \"Urgent : Votre visibilité nécessite une refonte pour ne pas laisser votre art dans l'ombre.\";\n                seoSummary = \"Des améliorations significatives en SEO sont nécessaires pour être découvert par votre public.\";\n                socialSummary = \"Renforcez votre présence sociale. C'est un levier simple et puissant pour l'artisanat.\";\n                marketingSummary = \"Votre marketing digital est à construire. Chaque pas compte pour valoriser votre travail.\";\n            }\n\n            document.getElementById('overall-score').textContent = `Score Général : ${Math.max(0, Math.min(100, score + Math.floor(Math.random() * 20)))}/100`; // Add some randomness for \"realism\"\n            document.getElementById('visibility-summary').textContent = visibilitySummary;\n            document.getElementById('seo-summary').textContent = seoSummary;\n            document.getElementById('social-summary').textContent = socialSummary;\n            document.getElementById('marketing-summary').textContent = marketingSummary;\n\n            document.getElementById('visibility-recs').innerHTML = visibilityRecs.map(rec => `<li>${rec}</li>`).join('');\n            document.getElementById('seo-recs').innerHTML = seoRecs.map(rec => `<li>${rec}</li>`).join('');\n            document.getElementById('social-recs').innerHTML = socialRecs.map(rec => `<li>${rec}</li>`).join('');\n            document.getElementById('marketing-recs').innerHTML = marketingRecs.map(rec => `<li>${rec}</li>`).join('');\n\n\n            document.getElementById('tool-result').style.display = 'block';\n            document.getElementById('tool-result').scrollIntoView({ behavior: 'smooth' });\n        });\n    </script>\n<div id=\"qa-smoke-result\" hidden></div>\n<script id=\"farmbuilder-affiliate-helper\">\n(function () {\n  window.__UTILITY_AFFILIATE_MAP = window.__UTILITY_AFFILIATE_MAP || {};\n  document.addEventListener(\"click\", function (event) {\n    const target = event.target.closest(\"[data-affiliate-slot]\");\n    if (!target) return;\n    const slot = target.getAttribute(\"data-affiliate-slot\");\n    const href = window.__UTILITY_AFFILIATE_MAP[slot];\n    if (!href) return;\n    if (target.tagName && target.tagName.toLowerCase() === \"a\") {\n      target.setAttribute(\"href\", href);\n      target.removeAttribute(\"rel\");\n      return;\n    }\n    event.preventDefault();\n    window.open(href, \"_blank\");\n  }, true);\n})();\n</script>\n<script id=\"farmbuilder-functional-qa\">\n(function () {\n  function marker() {\n    let node = document.getElementById(\"qa-smoke-result\");\n    if (node) return node;\n    node = document.createElement(\"div\");\n    node.id = \"qa-smoke-result\";\n    node.hidden = true;\n    document.body.appendChild(node);\n    return node;\n  }\n\n  let qaFinished = false;\n  let qaWatchdog = null;\n\n  function normalize(text) {\n    return String(text || \"\").replace(/\\s+/g, \" \").trim();\n  }\n\n  function findForm() {\n    return document.getElementById(\"tool-form\") || document.querySelector(\"form\");\n  }\n\n  function findResult() {\n    return (\n      document.getElementById(\"tool-result\") ||\n      document.querySelector(\"[data-result]\") ||\n      document.querySelector(\".tool-result, .result-card, .result, .results, .output, .preview, .diagnostic, .analysis\")\n    );\n  }\n\n  function primaryAction(form) {\n    if (!form) return null;\n    return (\n      document.getElementById(\"tool-submit\") ||\n      form.querySelector(\"#tool-submit\") ||\n      form.querySelector(\"[data-primary-action]\") ||\n      form.querySelector(\"button[type=submit]\") ||\n      form.querySelector(\"button\") ||\n      form.querySelector(\"input[type=submit]\")\n    );\n  }\n\n  function resultSignature(node) {\n    if (!node) return \"\";\n    const text = normalize(node.textContent);\n    const html = normalize(node.innerHTML).slice(0, 600);\n    return `${text}||${html}`;\n  }\n\n  function resultHeadline(node) {\n    if (!node) return \"\";\n    const heading = node.querySelector(\"h1, h2, h3, strong, b\");\n    return normalize(heading ? heading.textContent : \"\");\n  }\n\n  function sampleText(field) {\n    const key = `${field.id || \"\"} ${field.name || \"\"} ${field.placeholder || \"\"}`.toLowerCase();\n    if (/email/.test(key)) return \"bonjour@example.com\";\n    if (/url|site|website|lien/.test(key)) return \"https://example.com/offre-solaire\";\n    if (/phone|tel|mobile/.test(key)) return \"0612345678\";\n    if (/ville|city|localisation|location|region|departement|postal/.test(key)) return \"Paris\";\n    if (/orientation/.test(key)) return \"sud\";\n    if (/keyword|theme|topic|sujet|subject/.test(key)) return \"energie solaire domestique\";\n    if (/titre|title/.test(key)) return \"Simulateur solaire maison\";\n    if (/nom|name|project/.test(key)) return \"Projet Horizon\";\n    if (/description|notes|content|message/.test(key)) return \"Maison individuelle exposee sud avec toiture exploitable.\";\n    return field.placeholder || \"France\";\n  }\n\n  function sampleNumber(field) {\n    const key = `${field.id || \"\"} ${field.name || \"\"}`.toLowerCase();\n    if (/inclinaison|angle|slope/.test(key)) return \"30\";\n    if (/surface|size|m2|sqm/.test(key)) return \"28\";\n    if (/annee|year/.test(key)) return \"2024\";\n    if (/prix|price|budget|cost|amount|montant/.test(key)) return \"12000\";\n    const min = Number(field.min || \"\");\n    const max = Number(field.max || \"\");\n    if (Number.isFinite(min) && Number.isFinite(max) && max >= min) {\n      return String(Math.min(max, Math.max(min, min + Math.round((max - min) * 0.35))));\n    }\n    if (Number.isFinite(min)) return String(Math.max(min, 12));\n    if (Number.isFinite(max)) return String(Math.min(max, 12));\n    return field.value || \"12\";\n  }\n\n  function applySample(field) {\n    const tag = (field.tagName || \"\").toLowerCase();\n    const type = (field.type || \"\").toLowerCase();\n    if (field.disabled) return;\n    if (type === \"hidden\" || type === \"submit\" || type === \"button\" || type === \"reset\" || type === \"image\" || type === \"file\") {\n      return;\n    }\n    const currentValue = normalize(field.value);\n    if (tag === \"select\") {\n      if (currentValue) return;\n      const option = Array.from(field.options || []).find((item) => item.value && !item.disabled) || field.options[0];\n      if (option) field.value = option.value;\n      return;\n    }\n    if (type === \"checkbox\") {\n      if (field.checked) return;\n      field.checked = true;\n      return;\n    }\n    if (type === \"radio\") {\n      if (field.checked) return;\n      field.checked = true;\n      return;\n    }\n    if (type === \"date\") {\n      if (currentValue) return;\n      field.value = \"2026-03-01\";\n      return;\n    }\n    if (type === \"email\") {\n      if (currentValue) return;\n      field.value = \"bonjour@example.com\";\n      return;\n    }\n    if (type === \"url\") {\n      if (currentValue) return;\n      field.value = \"https://example.com/offre-solaire\";\n      return;\n    }\n    if (type === \"tel\") {\n      if (currentValue) return;\n      field.value = \"0612345678\";\n      return;\n    }\n    if (type === \"color\") {\n      if (currentValue) return;\n      field.value = \"#2f855a\";\n      return;\n    }\n    if (type === \"number\" || type === \"range\") {\n      if (currentValue) return;\n      field.value = sampleNumber(field);\n      return;\n    }\n    if (currentValue) return;\n    field.value = sampleText(field);\n  }\n\n  function stamp(status, detail, headline, primary) {\n    if (qaFinished) return;\n    qaFinished = true;\n    if (qaWatchdog) {\n      window.clearTimeout(qaWatchdog);\n      qaWatchdog = null;\n    }\n    const node = marker();\n    node.dataset.status = status;\n    node.dataset.mode = \"native-form\";\n    node.dataset.detail = detail || \"\";\n    node.dataset.headline = headline || \"\";\n    node.dataset.primary = primary || \"\";\n    node.dataset.viewport = window.innerWidth <= 640 ? \"mobile\" : \"desktop\";\n    window.setTimeout(function () {\n      try {\n        window.stop();\n      } catch (_error) {}\n    }, 0);\n  }\n\n  function installModalGuards() {\n    const noop = function () {};\n    const approve = function () { return true; };\n    const empty = function () { return \"\"; };\n    try { window.alert = noop; } catch (_error) {}\n    try { window.confirm = approve; } catch (_error) {}\n    try { window.prompt = empty; } catch (_error) {}\n  }\n\n  function triggerAction(form, action) {\n    try {\n      if (typeof form.requestSubmit === \"function\") {\n        form.requestSubmit(action || undefined);\n        return;\n      }\n    } catch (_error) {}\n    if (action && typeof action.click === \"function\") {\n      action.click();\n      return;\n    }\n    form.dispatchEvent(new Event(\"submit\", { bubbles: true, cancelable: true }));\n  }\n\n  function inspectResult(before, attemptsLeft) {\n    const result = findResult();\n    if (!result) {\n      stamp(\"fail\", \"La zone de resultat est introuvable.\", \"\");\n      return;\n    }\n    const after = resultSignature(result);\n    const text = normalize(result.textContent);\n    if (after && after !== before && text.length >= 24) {\n      const primary = result.querySelector(\"a[href], button[data-href], [data-primary-url]\") || document.querySelector(\"#tool-result a[href]\");\n      stamp(\"pass\", \"Le formulaire natif a mis a jour la zone de resultat.\", resultHeadline(result), primary ? (primary.getAttribute(\"href\") || primary.getAttribute(\"data-primary-url\") || \"\") : \"\");\n      return;\n    }\n    if (attemptsLeft > 0) {\n      window.setTimeout(function () {\n        inspectResult(before, attemptsLeft - 1);\n      }, 250);\n      return;\n    }\n    stamp(\"fail\", \"La zone de resultat n'a pas renvoye de contenu exploitable.\", resultHeadline(result));\n  }\n\n  function runSmoke() {\n    const params = new URLSearchParams(window.location.search);\n    if (params.get(\"__qa\") !== \"functional\") return;\n    qaWatchdog = window.setTimeout(function () {\n      stamp(\"fail\", \"QA smoke timed out before the page reported a usable result.\", \"\");\n    }, 7000);\n    const form = findForm();\n    if (!form) {\n      stamp(\"fail\", \"Le formulaire principal est introuvable.\", \"\");\n      return;\n    }\n    const result = findResult();\n    const before = resultSignature(result);\n    installModalGuards();\n    try {\n      form.querySelectorAll(\"input, select, textarea\").forEach(applySample);\n    } catch (error) {\n      stamp(\"fail\", error && error.message ? `QA smoke sample failed: ${error.message}` : \"QA smoke sample failed before submit.\", \"\");\n      return;\n    }\n    const action = primaryAction(form);\n    try {\n      triggerAction(form, action);\n    } catch (error) {\n      stamp(\"fail\", error && error.message ? `QA smoke submit failed: ${error.message}` : \"QA smoke submit failed.\", \"\");\n      return;\n    }\n    inspectResult(before, 10);\n  }\n\n  window.addEventListener(\"error\", function (event) {\n    const message = event && event.message ? event.message : \"JavaScript runtime error during QA smoke.\";\n    stamp(\"fail\", `QA smoke JS error: ${message}`, \"\");\n  }, { once: true });\n\n  window.addEventListener(\"unhandledrejection\", function (event) {\n    const reason = event && event.reason;\n    const detail = typeof reason === \"string\"\n      ? reason\n      : reason && reason.message\n        ? reason.message\n        : \"Unhandled promise rejection during QA smoke.\";\n    stamp(\"fail\", `QA smoke rejection: ${detail}`, \"\");\n  }, { once: true });\n\n  if (document.readyState === \"loading\") {\n    document.addEventListener(\"DOMContentLoaded\", function () {\n      window.setTimeout(runSmoke, 60);\n    }, { once: true });\n  } else {\n    window.setTimeout(runSmoke, 60);\n  }\n})();\n</script>\n</body>\n</html>",
+    "generation_mode": "direct_html"
+  }
+}
