@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outil d&#x27;Audit de Présence Numérique pour Artisans du Patrimoine | Votre Visibilité Numérique : Le Diagnostic</title>
+    <meta name="description" content="Évaluez votre visibilité en ligne, l">
+    <style>
+        :root {
+            --color-bg: #f8f0e5;
+            --color-text: #332d29;
+            --color-primary: #b18e72;
+            --color-secondary: #e0d0c3;
+            --color-accent: #8b5e3e;
+            --font-family-header: 'Helvetica Neue', Arial, sans-serif;
+            --font-family-body: 'Georgia', serif;
+            --glass-bg: rgba(255, 255, 255, 0.7);
+            --glass-border: rgba(255, 255, 255, 0.9);
+            --glass-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --glow-color: rgba(177, 142, 114, 0.3);
+        }
+
+        body {
+            font-family: var(--font-family-body);
+            line-height: 1.6;
+            color: var(--color-text);
+            background-color: var(--color-bg);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-x: hidden;
+        }
+
+        header {
+            width: 100%;
+            background-color: var(--color-primary);
+            color: var(--color-bg);
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: var(--glass-shadow);
+        }
+
+        h1, h2, h3 {
+            font-family: var(--font-family-header);
+            margin-top: 0;
+            color: var(--color-accent);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            letter-spacing: -1px;
+            color: var(--color-bg);
+        }
+
+        h2 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        h3 {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 30px auto;
+            display: grid;
+            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+
+        .card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: var(--glass-shadow);
+            backdrop-filter: blur(5px);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            border-radius: 15px;
+            background: radial-gradient(circle at top left, var(--glow-color) 0%, transparent 50%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 0;
+        }
+
+        .card:hover::before {
+            opacity: 1;
+        }
+
+        .card > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+            color: var(--color-accent);
+        }
+
+        input[type="url"],
+        input[type="text"],
+        select,
+        textarea {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border: 1px solid var(--color-secondary);
+            border-radius: 5px;
+            font-family: var(--font-family-body);
+            font-size: 1em;
+            background-color: var(--color-bg);
+            color: var(--color-text);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        button {
+            background-color: var(--color-accent);
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1em;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: var(--color-primary);
+        }
+
+        #tool-result {
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px dashed var(--color-primary);
+            background-color: var(--color-secondary);
+            border-radius: 8px;
+            font-size: 0.95em;
+            display: none;
+        }
+
+        .result-section {
+            margin-bottom: 15px;
+        }
+
+        .result-section h3 {
+            color: var(--color-accent);
+            margin-bottom: 8px;
+        }
+
+        .score-display {
+            font-size: 2em;
+            font-weight: bold;
+            color: var(--color-accent);
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .recommendation-list {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        .seo-section {
+            width: 90%;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 30px;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 10px;
+            box-shadow: var(--glass-shadow);
+            backdrop-filter: blur(5px);
+        }
+
+        .seo-section h2 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .seo-section p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .card.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .headline-group h3 {
+            margin-top: 20px;
+            margin-bottom: 5px;
+            border-bottom: 1px solid var(--color-secondary);
+            padding-bottom: 5px;
+        }
+        .headline-group ul {
+            list-style: none;
+            padding: 0;
+        }
+        .headline-group li {
+            background-color: rgba(255, 255, 255, 0.4);
+            margin-bottom: 5px;
+            padding: 8px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+            .container {
+                grid-template-columns: 1fr;
+            }
+            .card.full-width {
+                grid-column: auto;
+            }
+        }
+    </style>
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://outil-d-audit-de-presence-numerique-pour-artisa-70031f53.onrender.com">
+    <meta property="og:title" content="Outil d&#x27;Audit de Présence Numérique pour Artisans du Patrimoine">
+    <meta property="og:description" content="Évaluez votre visibilité en ligne, l">
+    <meta property="og:url" content="https://outil-d-audit-de-presence-numerique-pour-artisa-70031f53.onrender.com">
+    <meta property="og:type" content="website">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Outil d'Audit de Présence Numérique pour Artisans du Patrimoine", "description": "Évaluez votre visibilité en ligne, l", "url": "https://outil-d-audit-de-presence-numerique-pour-artisa-70031f53.onrender.com", "applicationCategory": "UtilityApplication", "operatingSystem": "Web Browser"}</script>
+</head>
+<body data-site-slug="outil-d-audit-de-presence-numerique-pour-artisa-70031f53" data-runtime-mode="seo_diagnostic">
+    <header>
+        <h1>L'Aspect</h1>
+        <p>Outil d'Audit de Présence Numérique pour Artisans du Patrimoine</p>
+    </header>
+
+    <div class="container">
+        <div class="card full-width">
+            <h2>Votre Visibilité Numérique : Le Diagnostic</h2>
+            <p>Évaluez rapidement votre positionnement en ligne. Nous analysons les points clés de votre présence digitale pour vous aider à mieux valoriser votre savoir-faire artisanal.</p>
+            <form id="tool-form">
+                <label for="website-url">Votre site web (URL complète) :</label>
+                <input type="url" id="website-url" placeholder="https://votreatelier.fr" required>
+
+                <label for="business-name">Nom de votre atelier/entreprise :</label>
+                <input type="text" id="business-name" placeholder="Atelier Dupont - Ébéniste" required>
+
+                <label for="specialty">Votre spécialité artisanale :</label>
+                <input type="text" id="specialty" placeholder="Restauration de meubles anciens, Céramique d'art..." required>
+
+                <label for="social-media">Vos réseaux sociaux (séparés par des virgules) :</label>
+                <input type="text" id="social-media" placeholder="Facebook, Instagram, Pinterest">
+
+                <label for="target-audience">Votre clientèle cible :</label>
+                <select id="target-audience">
+                    <option value="particuliers">Particuliers (grand public)</option>
+                    <option value="professionnels">Professionnels (architectes, décorateurs)</option>
+                    <option value="collectionneurs">Collectionneurs / Amateurs d'art</option>
+                    <option value="mixte">Mixte</option>
+                </select>
+
+                <button type="submit" id="tool-submit">Lancer le Diagnostic</button>
+            </form>
+        </div>
+
+        <div class="card full-width" id="tool-result" style="display: none;">
+            <h2 id="result-headline">Résultats du Diagnostic</h2>
+            <div class="score-display" id="overall-score">Score Général : --/100</div>
+
+            <div class="result-section">
+                <h3>Visibilité en Ligne</h3>
+                <p id="visibility-summary"></p>
+                <ul class="recommendation-list" id="visibility-recs"></ul>
+            </div>
+
+            <div class="result-section">
+                <h3>Optimisation du Site Web (SEO)</h3>
+                <p id="seo-summary"></p>
+                <ul class="recommendation-list" id="seo-recs"></ul>
+            </div>
+
+            <div class="result-section">
+                <h3>Présence sur les Réseaux Sociaux</h3>
+                <p id="social-summary"></p>
+                <ul class="recommendation-list" id="social-recs"></ul>
+            </div>
+
+            <div class="result-section">
+                <h3>Marketing Digital & Contenu</h3>
+                <p id="marketing-summary"></p>
+                <ul class="recommendation-list" id="marketing-recs"></ul>
+            </div>
+            <button data-affiliate-slot="premium-analysis">Obtenir une Analyse Approfondie</button>
+        </div>
+
+        <div class="card">
+            <h2>Pourquoi un diagnostic ?</h2>
+            <p>Dans l'univers numérique actuel, être un artisan d'art ne suffit plus. Il faut aussi être visible. Notre outil vous éclaire sur les forces et faiblesses de votre stratégie digitale pour que votre savoir-faire rencontre son public.</p>
+        </div>
+
+        <div class="card">
+            <h2>Pour qui ?</h2>
+            <p>Spécialement conçu pour les artisans du patrimoine, les métiers d'art et créateurs français : ébénistes, céramistes, verriers, restaurateurs, joailliers, maroquiniers, etc. Votre art mérite d'être vu.</p>
+        </div>
+
+        <div class="card full-width">
+            <h2>Titres d'accroche pour votre site :</h2>
+            <div class="headline-group">
+                <h3>SEO</h3>
+                <ul>
+                    <li>Artisanat d'art français : Diagnostic SEO et Visibilité en Ligne</li>
+                    <li>Audit Digital Artisans du Patrimoine : Améliorez votre Présence</li>
+                    <li>Stratégie Digitale pour Métiers d'Art : Guide Complet</li>
+                </ul>
+            </div>
+            <div class="headline-group">
+                <h3>Impact / Clickbait</h3>
+                <ul>
+                    <li>Votre Atelier est-il Invisible sur le Web ? Découvrez-le Maintenant !</li>
+                    <li>L'Erreur N°1 des Artisans d'Art sur Internet (Et Comment l'Éviter)</li>
+                    <li>Doublez votre Clientèle : Le Secret de la Visibilité Digitale Artisanale</li>
+                </ul>
+            </div>
+            <div class="headline-group">
+                <h3>Expert</h3>
+                <ul>
+                    <li>Optimisation des Points de Contact Numériques pour l'Artisanat d'Art</li>
+                    <li>Analyse de Maturité Digitale pour les Acteurs du Patrimoine</li>
+                    <li>Cartographie Stratégique de la Présence en Ligne des Métiers Rares</li>
+                </ul>
+            </div>
+            <div class="headline-group">
+                <h3>Douceur / Approche</h3>
+                <ul>
+                    <li>Révélez la Beauté de Votre Art en Ligne : Notre Guide Doux</li>
+                    <li>Donnez à Votre Artisanat la Lumière qu'il Mérite sur Internet</li>
+                    <li>Un Compagnon Digital pour Votre Savoir-Faire d'Exception</li>
+                </ul>
+            </div>
+            <div class="headline-group">
+                <h3>Commercial</h3>
+                <ul>
+                    <li>Augmentez Vos Ventes : Le Diagnostic Digital pour Artisans</li>
+                    <li>Transformez Votre Présence en Ligne en Source de Revenus</li>
+                    <li>Débloquez Votre Potentiel Client avec Notre Audit Stratégique</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="seo-section">
+        <h2>Développez la Portée de Votre Artisanat d'Art en Ligne</h2>
+        <p>En tant qu'artisan du patrimoine en France, la visibilité numérique est devenue cruciale pour attirer une clientèle passionnée et valoriser votre savoir-faire unique. Vous cherchez à savoir comment améliorer votre présence sur Internet, optimiser votre site web pour les moteurs de recherche (SEO), et utiliser efficacement les réseaux sociaux pour l'artisanat d'art ? Notre outil d'audit digital est spécialement conçu pour les métiers d'art français.</p>
+        <p>Que vous soyez ébéniste, céramiste, verrier, restaurateur d'œuvres d'art, ou tout autre créateur d'exception, comprendre les rouages du marketing digital est essentiel. Découvrez comment votre atelier peut capter l'attention de collectionneurs, de décorateurs ou de particuliers à la recherche de pièces uniques et authentiques. Nous vous offrons des recommandations concrètes pour le référencement naturel de votre site internet, la gestion de votre e-réputation, et l'élaboration d'une stratégie de contenu qui mettra en lumière la qualité et l'histoire de vos créations.</p>
+        <p>Ne laissez plus vos créations se perdre dans l'ombre. Grâce à un diagnostic précis de votre visibilité en ligne, obtenez des pistes d'amélioration pour atteindre un public plus large, accroître votre notoriété et développer vos ventes, tout en respectant l'authenticité et les valeurs de l'artisanat d'art français. Explorez les opportunités du digital pour votre patrimoine vivant.</p>
+    </div>
+
+    <script>
+        document.getElementById('tool-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const websiteUrl = document.getElementById('website-url').value;
+            const businessName = document.getElementById('business-name').value;
+            const specialty = document.getElementById('specialty').value;
+            const socialMedia = document.getElementById('social-media').value;
+            const targetAudience = document.getElementById('target-audience').value;
+
+            // Simple simulation of analysis based on inputs
+            let score = 0;
+            let visibilityRecs = [];
+            let seoRecs = [];
+            let socialRecs = [];
+            let marketingRecs = [];
+
+            // Website URL check (basic)
+            if (websiteUrl.length > 10 && websiteUrl.includes('.')) {
+                score += 20;
+                visibilityRecs.push("Site web détecté. Assurez-vous qu'il est mobile-friendly et sécurisé (HTTPS).");
+            } else {
+                visibilityRecs.push("Absence ou problème d'URL de site web. Un site est crucial pour votre visibilité.");
+                score -= 10;
+            }
+
+            // Business Name (presence suggests established identity)
+            if (businessName.length > 5) {
+                score += 5;
+            }
+
+            // Specialty (keyword rich suggests better SEO potential)
+            if (specialty.split(',').length > 1 || specialty.length > 15) {
+                score += 10;
+                seoRecs.push("Votre spécialité est bien définie. Utilisez ces termes clés dans vos descriptions et titres de page.");
+            } else {
+                seoRecs.push("Pensez à détailler davantage votre spécialité pour un meilleur référencement.");
+            }
+
+            // Social Media presence (basic check)
+            const socialPlatforms = socialMedia.split(',').map(s => s.trim().toLowerCase()).filter(s => s.length > 0);
+            if (socialPlatforms.length >= 2) {
+                score += 15;
+                socialRecs.push(`Bonne présence sur ${socialPlatforms.length} plateformes. Pensez à adapter votre contenu à chacune.`);
+            } else if (socialPlatforms.length === 1) {
+                score += 5;
+                socialRecs.push("Vous êtes présent sur un réseau. Explorez d'autres plateformes pertinentes comme Pinterest ou Instagram.");
+            } else {
+                socialRecs.push("Absence de réseaux sociaux majeurs. C'est un levier puissant pour l'artisanat d'art.");
+                score -= 10;
+            }
+
+            // Target Audience (impacts marketing strategy)
+            if (targetAudience === 'collectionneurs' || targetAudience === 'professionnels') {
+                score += 10;
+                marketingRecs.push("Votre clientèle cible est spécifique. Développez du contenu qui répond à leurs attentes et préoccupations (ex: histoire des techniques, valeur patrimoniale).");
+            } else {
+                marketingRecs.push("Adaptez votre communication pour toucher votre audience : langage, visuels, canaux de diffusion.");
+            }
+
+            // General SEO / Content ideas (always relevant)
+            seoRecs.push("Mettez en place un blog pour partager votre savoir-faire et attirer du trafic qualifié.");
+            seoRecs.push("Optimisez les descriptions de vos produits/services avec des mots-clés pertinents.");
+            visibilityRecs.push("Enregistrez votre atelier sur Google My Business pour la visibilité locale.");
+            socialRecs.push("Utilisez des visuels de haute qualité et des stories pour montrer l'envers du décor de votre travail.");
+            marketingRecs.push("Pensez aux partenariats avec des influenceurs ou des blogs spécialisés dans l'artisanat.");
+
+            // Summaries based on score and inputs
+            let visibilitySummary = "Votre visibilité en ligne est le point de départ. Un site performant et une bonne indexation sont fondamentaux.";
+            let seoSummary = "L'optimisation pour les moteurs de recherche permet à votre atelier d'être trouvé par ceux qui cherchent votre art.";
+            let socialSummary = "Les réseaux sociaux sont votre vitrine vivante. Ils permettent de créer du lien avec votre audience.";
+            let marketingSummary = "Une stratégie de contenu pertinente convertira l'intérêt en opportunité commerciale.";
+
+            if (score > 60) {
+                visibilitySummary = "Votre base de visibilité semble solide. Il est temps d'affiner votre stratégie pour atteindre l'excellence.";
+                seoSummary = "Bonne orientation SEO. Pensez à l'analyse sémantique approfondie et au netlinking.";
+                socialSummary = "Votre présence sociale est active. Engagez-vous davantage avec votre communauté.";
+                marketingSummary = "Vous avez une bonne compréhension du marketing. Explorez les campagnes ciblées.";
+            } else if (score < 40) {
+                visibilitySummary = "Urgent : Votre visibilité nécessite une refonte pour ne pas laisser votre art dans l'ombre.";
+                seoSummary = "Des améliorations significatives en SEO sont nécessaires pour être découvert par votre public.";
+                socialSummary = "Renforcez votre présence sociale. C'est un levier simple et puissant pour l'artisanat.";
+                marketingSummary = "Votre marketing digital est à construire. Chaque pas compte pour valoriser votre travail.";
+            }
+
+            document.getElementById('overall-score').textContent = `Score Général : ${Math.max(0, Math.min(100, score + Math.floor(Math.random() * 20)))}/100`; // Add some randomness for "realism"
+            document.getElementById('visibility-summary').textContent = visibilitySummary;
+            document.getElementById('seo-summary').textContent = seoSummary;
+            document.getElementById('social-summary').textContent = socialSummary;
+            document.getElementById('marketing-summary').textContent = marketingSummary;
+
+            document.getElementById('visibility-recs').innerHTML = visibilityRecs.map(rec => `<li>${rec}</li>`).join('');
+            document.getElementById('seo-recs').innerHTML = seoRecs.map(rec => `<li>${rec}</li>`).join('');
+            document.getElementById('social-recs').innerHTML = socialRecs.map(rec => `<li>${rec}</li>`).join('');
+            document.getElementById('marketing-recs').innerHTML = marketingRecs.map(rec => `<li>${rec}</li>`).join('');
+
+
+            document.getElementById('tool-result').style.display = 'block';
+            document.getElementById('tool-result').scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
+<div id="qa-smoke-result" hidden></div>
+<script id="farmbuilder-affiliate-helper">
+(function () {
+  window.__UTILITY_AFFILIATE_MAP = window.__UTILITY_AFFILIATE_MAP || {};
+  document.addEventListener("click", function (event) {
+    const target = event.target.closest("[data-affiliate-slot]");
+    if (!target) return;
+    const slot = target.getAttribute("data-affiliate-slot");
+    const href = window.__UTILITY_AFFILIATE_MAP[slot];
+    if (!href) return;
+    if (target.tagName && target.tagName.toLowerCase() === "a") {
+      target.setAttribute("href", href);
+      target.removeAttribute("rel");
+      return;
+    }
+    event.preventDefault();
+    window.open(href, "_blank");
+  }, true);
+})();
+</script>
+<script id="farmbuilder-functional-qa">
+(function () {
+  function marker() {
+    let node = document.getElementById("qa-smoke-result");
+    if (node) return node;
+    node = document.createElement("div");
+    node.id = "qa-smoke-result";
+    node.hidden = true;
+    document.body.appendChild(node);
+    return node;
+  }
+
+  let qaFinished = false;
+  let qaWatchdog = null;
+
+  function normalize(text) {
+    return String(text || "").replace(/\s+/g, " ").trim();
+  }
+
+  function findForm() {
+    return document.getElementById("tool-form") || document.querySelector("form");
+  }
+
+  function findResult() {
+    return (
+      document.getElementById("tool-result") ||
+      document.querySelector("[data-result]") ||
+      document.querySelector(".tool-result, .result-card, .result, .results, .output, .preview, .diagnostic, .analysis")
+    );
+  }
+
+  function primaryAction(form) {
+    if (!form) return null;
+    return (
+      document.getElementById("tool-submit") ||
+      form.querySelector("#tool-submit") ||
+      form.querySelector("[data-primary-action]") ||
+      form.querySelector("button[type=submit]") ||
+      form.querySelector("button") ||
+      form.querySelector("input[type=submit]")
+    );
+  }
+
+  function resultSignature(node) {
+    if (!node) return "";
+    const text = normalize(node.textContent);
+    const html = normalize(node.innerHTML).slice(0, 600);
+    return `${text}||${html}`;
+  }
+
+  function resultHeadline(node) {
+    if (!node) return "";
+    const heading = node.querySelector("h1, h2, h3, strong, b");
+    return normalize(heading ? heading.textContent : "");
+  }
+
+  function sampleText(field) {
+    const key = `${field.id || ""} ${field.name || ""} ${field.placeholder || ""}`.toLowerCase();
+    if (/email/.test(key)) return "bonjour@example.com";
+    if (/url|site|website|lien/.test(key)) return "https://example.com/offre-solaire";
+    if (/phone|tel|mobile/.test(key)) return "0612345678";
+    if (/ville|city|localisation|location|region|departement|postal/.test(key)) return "Paris";
+    if (/orientation/.test(key)) return "sud";
+    if (/keyword|theme|topic|sujet|subject/.test(key)) return "energie solaire domestique";
+    if (/titre|title/.test(key)) return "Simulateur solaire maison";
+    if (/nom|name|project/.test(key)) return "Projet Horizon";
+    if (/description|notes|content|message/.test(key)) return "Maison individuelle exposee sud avec toiture exploitable.";
+    return field.placeholder || "France";
+  }
+
+  function sampleNumber(field) {
+    const key = `${field.id || ""} ${field.name || ""}`.toLowerCase();
+    if (/inclinaison|angle|slope/.test(key)) return "30";
+    if (/surface|size|m2|sqm/.test(key)) return "28";
+    if (/annee|year/.test(key)) return "2024";
+    if (/prix|price|budget|cost|amount|montant/.test(key)) return "12000";
+    const min = Number(field.min || "");
+    const max = Number(field.max || "");
+    if (Number.isFinite(min) && Number.isFinite(max) && max >= min) {
+      return String(Math.min(max, Math.max(min, min + Math.round((max - min) * 0.35))));
+    }
+    if (Number.isFinite(min)) return String(Math.max(min, 12));
+    if (Number.isFinite(max)) return String(Math.min(max, 12));
+    return field.value || "12";
+  }
+
+  function applySample(field) {
+    const tag = (field.tagName || "").toLowerCase();
+    const type = (field.type || "").toLowerCase();
+    if (field.disabled) return;
+    if (type === "hidden" || type === "submit" || type === "button" || type === "reset" || type === "image" || type === "file") {
+      return;
+    }
+    const currentValue = normalize(field.value);
+    if (tag === "select") {
+      if (currentValue) return;
+      const option = Array.from(field.options || []).find((item) => item.value && !item.disabled) || field.options[0];
+      if (option) field.value = option.value;
+      return;
+    }
+    if (type === "checkbox") {
+      if (field.checked) return;
+      field.checked = true;
+      return;
+    }
+    if (type === "radio") {
+      if (field.checked) return;
+      field.checked = true;
+      return;
+    }
+    if (type === "date") {
+      if (currentValue) return;
+      field.value = "2026-03-01";
+      return;
+    }
+    if (type === "email") {
+      if (currentValue) return;
+      field.value = "bonjour@example.com";
+      return;
+    }
+    if (type === "url") {
+      if (currentValue) return;
+      field.value = "https://example.com/offre-solaire";
+      return;
+    }
+    if (type === "tel") {
+      if (currentValue) return;
+      field.value = "0612345678";
+      return;
+    }
+    if (type === "color") {
+      if (currentValue) return;
+      field.value = "#2f855a";
+      return;
+    }
+    if (type === "number" || type === "range") {
+      if (currentValue) return;
+      field.value = sampleNumber(field);
+      return;
+    }
+    if (currentValue) return;
+    field.value = sampleText(field);
+  }
+
+  function stamp(status, detail, headline, primary) {
+    if (qaFinished) return;
+    qaFinished = true;
+    if (qaWatchdog) {
+      window.clearTimeout(qaWatchdog);
+      qaWatchdog = null;
+    }
+    const node = marker();
+    node.dataset.status = status;
+    node.dataset.mode = "native-form";
+    node.dataset.detail = detail || "";
+    node.dataset.headline = headline || "";
+    node.dataset.primary = primary || "";
+    node.dataset.viewport = window.innerWidth <= 640 ? "mobile" : "desktop";
+    window.setTimeout(function () {
+      try {
+        window.stop();
+      } catch (_error) {}
+    }, 0);
+  }
+
+  function installModalGuards() {
+    const noop = function () {};
+    const approve = function () { return true; };
+    const empty = function () { return ""; };
+    try { window.alert = noop; } catch (_error) {}
+    try { window.confirm = approve; } catch (_error) {}
+    try { window.prompt = empty; } catch (_error) {}
+  }
+
+  function triggerAction(form, action) {
+    try {
+      if (typeof form.requestSubmit === "function") {
+        form.requestSubmit(action || undefined);
+        return;
+      }
+    } catch (_error) {}
+    if (action && typeof action.click === "function") {
+      action.click();
+      return;
+    }
+    form.dispatchEvent(new Event("submit", { bubbles: true, cancelable: true }));
+  }
+
+  function inspectResult(before, attemptsLeft) {
+    const result = findResult();
+    if (!result) {
+      stamp("fail", "La zone de resultat est introuvable.", "");
+      return;
+    }
+    const after = resultSignature(result);
+    const text = normalize(result.textContent);
+    if (after && after !== before && text.length >= 24) {
+      const primary = result.querySelector("a[href], button[data-href], [data-primary-url]") || document.querySelector("#tool-result a[href]");
+      stamp("pass", "Le formulaire natif a mis a jour la zone de resultat.", resultHeadline(result), primary ? (primary.getAttribute("href") || primary.getAttribute("data-primary-url") || "") : "");
+      return;
+    }
+    if (attemptsLeft > 0) {
+      window.setTimeout(function () {
+        inspectResult(before, attemptsLeft - 1);
+      }, 250);
+      return;
+    }
+    stamp("fail", "La zone de resultat n'a pas renvoye de contenu exploitable.", resultHeadline(result));
+  }
+
+  function runSmoke() {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("__qa") !== "functional") return;
+    qaWatchdog = window.setTimeout(function () {
+      stamp("fail", "QA smoke timed out before the page reported a usable result.", "");
+    }, 7000);
+    const form = findForm();
+    if (!form) {
+      stamp("fail", "Le formulaire principal est introuvable.", "");
+      return;
+    }
+    const result = findResult();
+    const before = resultSignature(result);
+    installModalGuards();
+    try {
+      form.querySelectorAll("input, select, textarea").forEach(applySample);
+    } catch (error) {
+      stamp("fail", error && error.message ? `QA smoke sample failed: ${error.message}` : "QA smoke sample failed before submit.", "");
+      return;
+    }
+    const action = primaryAction(form);
+    try {
+      triggerAction(form, action);
+    } catch (error) {
+      stamp("fail", error && error.message ? `QA smoke submit failed: ${error.message}` : "QA smoke submit failed.", "");
+      return;
+    }
+    inspectResult(before, 10);
+  }
+
+  window.addEventListener("error", function (event) {
+    const message = event && event.message ? event.message : "JavaScript runtime error during QA smoke.";
+    stamp("fail", `QA smoke JS error: ${message}`, "");
+  }, { once: true });
+
+  window.addEventListener("unhandledrejection", function (event) {
+    const reason = event && event.reason;
+    const detail = typeof reason === "string"
+      ? reason
+      : reason && reason.message
+        ? reason.message
+        : "Unhandled promise rejection during QA smoke.";
+    stamp("fail", `QA smoke rejection: ${detail}`, "");
+  }, { once: true });
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", function () {
+      window.setTimeout(runSmoke, 60);
+    }, { once: true });
+  } else {
+    window.setTimeout(runSmoke, 60);
+  }
+})();
+</script>
+</body>
+</html>
